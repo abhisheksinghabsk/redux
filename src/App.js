@@ -1,0 +1,21 @@
+import {Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import './App.scss';
+import { Home } from './Components/Home';
+import { Header } from './Components/Header';
+import{Toaster} from "react-hot-toast"
+import { Cart } from './Components/Cart';
+
+function App() {
+  return (
+    <Router>
+      <Header/>
+<Routes>
+  <Route path='/' element={<Home/>} />
+<Route path='/cart'element={<Cart/>} />
+</Routes>
+<Toaster/>
+    </Router>
+  );
+}
+
+export default App;
